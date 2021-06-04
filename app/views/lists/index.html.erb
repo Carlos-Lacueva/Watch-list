@@ -1,13 +1,19 @@
-<h1>Here are all of your lists!</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Here are all of your lists!</h1>    <p>Create libraries to esily store your favorite movies.</p>
+    <%= link_to "Create a new list", new_list_path %>
+  </div>
+</div>
 
-<ul>
+
+
+
+<div class= "cards">
   <% @lists.each do |list| %>
-    <%= link_to list_path(list.id) do %>
-      <li><%= list.name %></li>
+    <%= link_to list_path(list.id) do %> 
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= list.name %>
+      </div>
     <% end %>
   <% end %>
-</ul>
-
-<p>
-<%= link_to "Create a new list", new_list_path %>
-</p>
+</div>

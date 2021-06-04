@@ -1,9 +1,14 @@
-<%= form_for(@list) do |t| %>
-  <%= t.label :name %>
-  <%= t.text_field :name %>
-  <%= t.submit %>
-<% end %>
-
-<p>
-<%= link_to "Main list page", lists_path %>
-</p>
+<div class="container">
+  <div class="form">
+    <%= form_for(@list) do |t| %>
+      <%= t.label :name %>
+      <%= t.text_field :name %>
+      <div class="btn">
+        <%= t.submit %>
+      </div>
+    <% end %>
+  </div>
+  <p>
+  <%= link_to "Main list page", lists_path %>
+  </p>
+</div>
