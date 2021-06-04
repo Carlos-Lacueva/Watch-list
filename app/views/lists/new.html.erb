@@ -1,10 +1,10 @@
 <div class="container">
   <div class="form">
-    <%= form_for(@list) do |t| %>
-      <%= t.label :name %>
-      <%= t.text_field :name %>
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <div class="btn">
-        <%= t.submit %>
+        <%= f.button :submit  %>
       </div>
     <% end %>
   </div>
